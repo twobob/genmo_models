@@ -21,6 +21,10 @@ uv venv .venv
 source .venv/bin/activate
 uv pip install -e . --no-build-isolation
 ```
+N.B. On windows the **activate** command is
+```bash
+.venv/bin/activate
+```
 
 ## Download Weights
 
