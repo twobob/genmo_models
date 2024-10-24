@@ -26,6 +26,26 @@ N.B. On windows the **activate** command is
 .venv/bin/activate
 ```
 
+## Extra notes on the windows install
+
+If you can not get flash-attn to play nice from source, downloaded this one https://huggingface.co/Kijai/Mochi_preview_comfy/resolve/main/flash_attn-2.6.3-cp310-cp310-win_amd64.whl
+and install it like so
+```bash
+uv pip install C:/Users/new/Downloads/flash_attn-2.6.3-cp310-cp310-win_amd64.whl
+```
+same for any missing things - Setuptools, 
+example: install from github source in the .venv using uv
+```bash
+git clone https://github.com/gpuopenanalytics/pynvml
+cd pynvml
+uv pip install .
+```
+when you can finally run the following command succesfully 
+```bash
+uv pip install -e . --no-build-isolation
+```
+you should be good to go.
+
 ## Download Weights
 
 Download the weights from [Hugging Face](https://huggingface.co/genmo/mochi-1-preview/tree/main) or via `magnet:?xt=urn:btih:441da1af7a16bcaa4f556964f8028d7113d21cbb&dn=weights&tr=udp://tracker.opentrackr.org:1337/announce` to a folder on your computer.
@@ -37,6 +57,14 @@ Start the gradio UI with
 ```bash
 python3 -m mochi_preview.gradio_ui --model_dir "<path_to_downloaded_directory>"
 ```
+
+**python or python3**
+
+NB On Windows use python, not python 3 as you may access the wrong python or none whatsoever
+```bash
+python -m mochi_preview.gradio_ui --model_dir "<path_to_downloaded_directory>"
+```
+this follow for all the subsequent commands.  On windows elide the "3".
 
 Or generate videos directly from the CLI with
 
