@@ -23,7 +23,7 @@ uv pip install -e . --no-build-isolation
 ```
 N.B. On windows the **activate** command is
 ```bash
-.venv/bin/activate
+.venv/Scripts/activate
 ```
 
 ## Extra notes on the windows install
