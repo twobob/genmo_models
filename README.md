@@ -21,12 +21,12 @@ uv venv .venv
 source .venv/bin/activate
 uv pip install -e . --no-build-isolation
 ```
-N.B. On windows the **activate** command is
+N.B. On Windows the **activate** command is
 ```bash
 .venv/Scripts/activate
 ```
 
-## Extra notes on the windows install
+## Extra notes on the Windows install
 
 If you can not get flash-attn to play nice from source, downloaded this one https://huggingface.co/Kijai/Mochi_preview_comfy/resolve/main/flash_attn-2.6.3-cp310-cp310-win_amd64.whl
 and install it like so
@@ -64,7 +64,7 @@ NB On Windows use python, not python 3 as you may access the wrong python or non
 ```bash
 python -m mochi_preview.gradio_ui --model_dir "<path_to_downloaded_directory>"
 ```
-this follow for all the subsequent commands.  On windows elide the "3".
+this follow for all the subsequent commands.  On Windows elide the "3".
 
 Or generate videos directly from the CLI with
 
